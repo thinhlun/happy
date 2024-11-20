@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Background</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Ngăn chặn cuộn dọc */
+        }
+        .cake-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cake-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        h1 {
+            font-size: 4em;
+            color: white;
+            margin: 20px 0;
+        }
+        .sticker {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+        }
+        .button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .hidden-content {
+            display: none;
+            flex-direction: row; /* Sắp xếp hình ảnh theo hàng ngang */
+            align-items: center;
+            overflow-x: auto; /* Cho phép cuộn ngang */
+            height: 100vh; /* Đặt chiều cao cố định */
+        }
+        .hidden-content img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+        }
+        .next-button {
+            display: none; /* Ẩn nút ban đầu */
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showHiddenContent() {
+            document.querySelector('.cake-container').style.display = 'none';
+            document.querySelector('.hidden-content').style.display = 'flex';
+        }
+    </script>
+</head>
+<body>
+    <div class="cake-container">
+        <img src="https://dayve.vn/wp-content/uploads/2022/12/ve-banh-gato-buoc-10.jpg" alt="Cake Image">
+        <h1>Happy Birthday Bé Iu</h1>
+        <img class="sticker" src="https://scontent.xx.fbcdn.net/v/t39.1997-6/445404732_377351071438411_1141503384471992444_n.webp?stp=dst-png_s168x128&_nc_cat=105&ccb=1-7&_nc_sid=ba09c1&_nc_eui2=AeEOEgKYqYVhIn-IrhhG97Xvi3DqckajxcyLcOpyRqPFzMdcc7NOOIwcHo0UqmVXf4nQjF4gMwmnpOA4rhbm-wew&_nc_ohc=IRdAevHsqEMQ7kNvgGFKnyh&_nc_ad=z-m&_nc_cid=0&_nc_zt=26&_nc_ht=scontent.xx&_nc_gid=AN53ETIhIBV3Y44vUp4w5Ua&oh=00_AYCZVnqJdmGM9NffcZLNWOl5Nna1XbygRU5WXHtZDbddwQ&oe=6743D229" alt="Happy Birthday Sticker">
+        <div class="button" onclick="showHiddenContent()">Nhấp vô đây nè bé iu ^-^</div>
+    </div>
+    <div class="hidden-content">
+        <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.15752-9/462542758_934037808790157_8672274387905002910_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHy1MjfMiyoC4e84ILtVymk7SkQ0ffhK5DtKRDR9-ErkDvoGdQGd6ubrQQgHWWYgdUoSFjE9MIfpLqjizzTq4mV&_nc_ohc=_r_4D_7oLrIQ7kNvgEDHniQ&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&oh=03_Q7cD1QEh3CQ_pwuMSCmfV_nxZzUEa0ENCOz6qAhjK_uiRU9K_w&oe=67656775"Image 1">
+        <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.15752-9/462554270_917855146957750_8128406663476576200_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFRwYjo_Pw_iTH0lrlqfOTQHtOkP4Q6i_8e06Q_hDqL_4eiRUvjRWKABfFWwc1dVTsGEaMkQaGf1lOdZAlLBYoB&_nc_ohc=Wx7ra5NykgMQ7kNvgGnGk6q&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&oh=03_Q7cD1QFJmE2gZMdcwtzof0n6QYZ1b5DD4HoO38Ks0f7-QYec7g&oe=67657540" alt="Image 2">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/462582101_28537573929166776_8522893041952822930_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeF4IVEwZJiZ0NOTtbpBa1kshWvsKFOcmVKFa-woU5yZUhiaVjamx9yBkpZhGZV7DcBI6YNOHeDD6X0JaPdmpYFw&_nc_ohc=DWqvFs22Cz8Q7kNvgGL6Wky&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QERD5yocbS8XQyRlKMl7llQOFw7UjVEHy_hWLFk1eWLEA&oe=67656502" alt="Image 3">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/462544230_1105506137650129_4120870971812349465_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFDRzFvTkoG9u4zEeiLyod14l6mi6o1jqTiXqaLqjWOpBxlas7V9AgVTglRb0J0QX3eO2NVN7ArHx7r1aZw6Yt4&_nc_ohc=-Z8Gqmap8BEQ7kNvgEDtOE9&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QFxQnqv9pE66ANB_w5361uwXHm3rMwRjAQURLJZGrlBRQ&oe=6765580E"Image 4">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/462562926_928512796094737_7775496383077601075_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE633Crhvz_CZNr0DsQXNLVQk6EiRekdZhCToSJF6R1mJL7ucapJnqdO_bDBUZUnrwx05W9N3rWEm-alhbj7nqV&_nc_ohc=-sLKWhTXysAQ7kNvgFfpDSS&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QEcnpZwCExym5RPJGMgq5vMMc7b2HZ3eUuSW6sZ-znAmA&oe=67654F9C" alt="Image 5">
+                <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.15752-9/462549781_2271094806605538_8576095100288418238_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHsjCQCKuU4fjGRF30Y-FHld4YqBK_6GUN3hioEr_oZQ8BL4VIBmhNzISdTIP0gp7IBqoCC-TSaSmUAYONT9TyY&_nc_ohc=o1wjnIno8gYQ7kNvgHwHYTr&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&oh=03_Q7cD1QEDaYMI4iJ9T063nXi5QqI8WHY7J7CjreqV4dMLXkmuOA&oe=67654D4A" alt="Image 6">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/462543546_1094199245025643_698841787665018137_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeENhElsxwx4_qZKyYr7uJrM1mykRHlDitjWbKREeUOK2NcJZeqg1JPebxtlLeJbsvkZpOFd7qY5BTNwlfkH2N9b&_nc_ohc=po5xBEj963oQ7kNvgHigXRk&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QENTWSjutSNRg2HLKNpZVDt7jHZQ-BCZ8-Xzq_ZXRq2eA&oe=67656C75" alt="Image 7">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/462550547_2891123891054127_6076552449780890675_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeF8JMW-pRyq1Aoc_1h2d-EyrNsVPWP3wY-s2xU9Y_fBj5MnWeQ4JjhaaCIe3GLPpk8BIw_HB7pxiPVmCynuivDF&_nc_ohc=eaZe5HwMLL0Q7kNvgGsIaPK&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QGKj9OR4GlGqp52vaZb_PSdBVrxHAEWq72vkAEgF1Gslw&oe=676559D8" alt="Image 8">
+        <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.15752-9/467465198_405218732662502_2611148818256558051_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeH84gYM3y2j32UhfRziUS9UC30-VIDXSQULfT5UgNdJBRftTS6RmOrmJgZw7FR9JdLQZocDefZ6UIptj2BlvO8a&_nc_ohc=6sLN_VGCllwQ7kNvgFa3tc-&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&oh=03_Q7cD1QE7foTaknEIZQ9YU6MLQg_cGlmu4koufIgMrJ3huCcCfQ&oe=67657EA5" alt="Image 9">
+        <img src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.15752-9/462559433_1283579672669382_3606762730583343053_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGxdm0yBJzzp92gVw1BlBd0bvEbISJEkwJu8RshIkSTAmb3kjrAjkqrMm0DRxfQ8k4IDU5dOt1v9TfAIkpZ1uJX&_nc_ohc=aWLJIN42RtIQ7kNvgHvqdPj&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&oh=03_Q7cD1QHoCe3tKFkEAv2d6pfm8CGiLRrsHT93tIKMPgCSFcp9mw&oe=67654F6D" alt="Image 10">
+    </div>
+</body>
+</html>
